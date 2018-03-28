@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dungeon of Text</string>
+    <string name="image_name">Background image</string>
 </resources>
