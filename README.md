@@ -13,3 +13,5 @@ The game will be developed for Android using tools such as the Android SDK.
 1) Chris Chong - 216128411
 2) Duc Nguyen - 216197049
 
+(Henry wants to also see both licenses.txt and changelog files)
+
