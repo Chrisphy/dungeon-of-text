@@ -1,0 +1,47 @@
+{
+  "Character": [
+    {
+      "details": {
+        "name": "Detective McGee",
+        "health": 100,
+        "invlimit": 4
+      }
+    }
+  ],
+  "Monster": [
+    {},
+    {
+      "DetailsAlive": {
+        "name": "The thing",
+        "alive": true,
+        "visible": true
+      },
+      "DetailsDead": {
+        "name": "The thing",
+        "alive": false,
+        "visible": false
+      }
+    }
+  ],
+  "Story": {
+    "intro-p1": "It was a cold dark and rainy night. This was a town where not many people lived.",
+    "intro-p2": "The wind rustled as a detective stood looking at an entrance to a cave.",
+    "intro-p3": "\"Hmmm\" he thought as the rain kept falling, this was the last reported sighting.",
+    "intro-p4": "There had been a series of dissapearing incidents for the past few months.",
+    "intro-p5": "The detective was slightly on edge as he peered into the deep crevice. All he saw was darkness.",
+    "intro-p6": "The detective, being young and unafraid then decided to directly go in.",
+    "intro-p7": "\"Maybe I'll be able to find some clues\", he thought.",
+    "intro-p8": "Little did the detective know that his life would change forever...",
+    "first-dungeon-p1": "Chocolate cake apple pie tart pudding marshmallow apple pie pie gummi bears candy canes.",
+    "first-dungeon-p2": "Liquorice biscuit powder carrot cake jelly beans cheesecake lemon drops apple pie. Muffin bear",
+    "first-dungeon-p3": "Marzipan danish wafer bonbon. Candy pie toffee powder liquorice chocolate bar. Chocolate bar lemon drops candy tootsie roll.",
+    "first-dungeon-p4": "Macaroon danish fruitcake lollipop croissant pie marshmallow cake marshmallow. Topping gummi bears.",
+    "first-dungeon-p5": "Cheesecake cake cookie. Bonbon cookie cupcake tart lemon drops donut. Marshmallow jelly ice cream fruitcake wafer cake. ",
+    "first-dungeon-p6": "Powder jelly beans liquorice dessert. Croissant lollipop chocolate bar liquorice caramels jelly beans apple pie.",
+    "first-dungeon-p7": "Sugar plum pie marzipan cheesecake gingerbread gummi bears. Candy biscuit liquorice wafer macaroon jelly-o.",
+    "first-dungeon-p8": "Dessert gingerbread candy canes oat cake. Croissant pastry carrot cake sweet sugar plum sugar plum",
+    "first-dungeon-p9": "Fruitcake donut sweet lemon drops gummies gummies. Chocolate gingerbread pudding.",
+    "first-dungeon-p10": "Jujubes tart candy marzipan gingerbread cheesecake cookie brownie jujubes. Sweet roll topping caramels oat cake pastry.",
+
+  }
+}
