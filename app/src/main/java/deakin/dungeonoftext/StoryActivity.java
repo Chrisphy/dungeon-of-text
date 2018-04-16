@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.lang.reflect.Array;
+
 public class StoryActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,7 @@ public class StoryActivity extends AppCompatActivity {
         int usermovement_number = 0;
 
 
+
         final Button upbtn = (Button) findViewById(R.id.up_move);
         final Button leftbtn = (Button) findViewById(R.id.left_move);
         final Button rightbtn = (Button) findViewById(R.id.right_move);
@@ -25,7 +28,6 @@ public class StoryActivity extends AppCompatActivity {
 
         ImageView img= (ImageView) findViewById(R.id.storybg);
         img.setImageResource(R.drawable.cloudy_intro_bg);
-
 
 
 
