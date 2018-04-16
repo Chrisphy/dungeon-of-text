@@ -9,3 +9,5 @@
 3/4/2018  - Added licenses and changelog file (Chris)
 11/4/2018 - Updated the Help activity and intents
 13/4/2018 - Adding the data.json file and updating changelog
+13/4/2018 - Added story acitivy and java class for it (Chris)
+13/4/2018 - Updated story acitivity with textview, buttons and cloudbackground (Chris)
