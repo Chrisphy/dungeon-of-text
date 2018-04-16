@@ -6,35 +6,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class StoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_story);
 
-        final Button helpbtn = (Button) findViewById(R.id.help_button);
-        final Button startbtn = (Button) findViewById(R.id.start_button);
-        final Button routebtn = (Button) findViewById(R.id.routes_button);
+        int usermovement_number = 0;
 
 
+        final Button upbtn = (Button) findViewById(R.id.up_move);
+        final Button leftbtn = (Button) findViewById(R.id.left_move);
+        final Button rightbtn = (Button) findViewById(R.id.right_move);
+
+
+        ImageView img= (ImageView) findViewById(R.id.storybg);
+        img.setImageResource(R.drawable.cloudy_intro_bg);
 
 
 
-        startbtn.setOnClickListener(new View.OnClickListener() {
+
+        upbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
-                    startActivity(intent);
-
-
-                }
-                catch (Exception e){
-                    Log.e("Error", "Failed to go to Helpactivity");
-                    e.printStackTrace();
-                }
 
             }
         });
@@ -42,45 +39,37 @@ public class StoryActivity extends AppCompatActivity {
 
 
 
-        routebtn.setOnClickListener(new View.OnClickListener() {
+        leftbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
-                    startActivity(intent);
-
-
-                }
-                catch (Exception e){
-                    Log.e("Error", "Failed to go to Helpactivity");
-                    e.printStackTrace();
-                }
 
             }
         });
 
 
 
-        helpbtn.setOnClickListener(new View.OnClickListener() {
+        rightbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
-                    startActivity(intent);
 
-
-                }
-                catch (Exception e){
-                    Log.e("Error", "Failed to go to Helpactivity");
-                    e.printStackTrace();
-                }
 
             }
         });
+
+
+
+
 
 
 
     }
+
+
+    public void screenTapped(View view) {
+        // Your code here
+
+    }
+
 
 
 
