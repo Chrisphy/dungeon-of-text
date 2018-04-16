@@ -9,3 +9,4 @@
 3/4/2018  - Added licenses and changelog file (Chris)
 11/4/2018 - Updated the Help activity and intents
 13/4/2018 - Adding the data.json file and updating changelog
+14/4/2018 - Adding splash screen.
