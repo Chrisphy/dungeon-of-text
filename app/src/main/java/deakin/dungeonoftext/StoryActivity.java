@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Array;
 
-public class StoryActivity extends AppCompatActivity {
+public class StoryActivity extends MainActivity {
 
 
     //Views
