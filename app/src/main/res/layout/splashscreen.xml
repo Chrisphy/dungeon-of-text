@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginBottom="20sp"
-        android:src="@drawable/shield" />
+        android:src="@mipmap/shield" />
 
     <TextView
         android:layout_width="match_parent"
