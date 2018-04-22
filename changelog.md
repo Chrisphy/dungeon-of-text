@@ -13,3 +13,4 @@
 16/4/2018 - Added story acitivy and java class for it (Chris)
 16/4/2018 - Updated story acitivity with textview, buttons and cloudbackground (Chris)
 21/4/2018 - Finished base classes for loading images and data movement array to be done next (Chris)
+22/4/2018 - Start matrix to track player movements(Duc)
