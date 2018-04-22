@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), StoryActivity.class);
                     startActivity(intent);
 
 
                 }
                 catch (Exception e){
-                    Log.e("Error", "Failed to go to Helpactivity");
+                    Log.e("Error", "Failed to go to StoryActivity");
                     e.printStackTrace();
                 }
 

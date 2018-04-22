@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="screenTapped"
-    tools:context="deakin.dungeonoftext.MainActivity">
+    tools:context=".StoryActivity">
 
     <ImageView
         android:id="@+id/storybg"
@@ -54,7 +53,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="2dp"
-        android:text="@string/Help" />
+        android:clickable="true"
+        android:text="@string/Help"
+        android:onClick="onClickView" />
 
 
 </RelativeLayout>
