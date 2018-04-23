@@ -15,30 +15,43 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class StoryActivity extends MainActivity {
 
 
     //Views
 
-    ImageView img = (ImageView) findViewById(R.id.storybg);
-    TextView textview = (TextView) findViewById(R.id.textView);
-
+    ImageView img;
+    TextView textview;
+    JSONObject jsonobj;
+    JSONArray jsonarr;
 
     //Assets
-    AssetManager assetManager = getResources().getAssets();
+    AssetManager assetManager;
     InputStream dataStream = null;
     InputStream imageStream = null;
 
-
     //Array for text to load into
-    String textarray[] = new String[50];
+    String jsonText = null;
 
+
+
+    //Arrays
+    String[] introtextarray = new String[50];
+
+
+    //Int
+    int size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,21 +68,50 @@ public class StoryActivity extends MainActivity {
         final Button rightbtn = (Button) findViewById(R.id.right_move);
 
 
+        img = (ImageView) findViewById(R.id.storybg);
+        textview = (TextView) findViewById(R.id.textView);
+        assetManager = getApplicationContext().getAssets();
 
-        try {
-            dataStream = assetManager.open("Data/Data.json");
-            if ( dataStream != null)
 
-                Log.e("Error", "Loaded");
-        } catch (IOException e) {
+        img.setImageResource(R.drawable.intro);
+
+
+
+
+        loadJSONFromAsset();
+
+        try{
+            // creating json array from json object
+            if(jsonText != null){
+                jsonobj = new JSONObject(jsonText);
+               // Log.e("Json String", "JSON String"+jsonobj.toString());
+
+                 JSONObject mainobj = jsonobj.getJSONObject("Story");
+
+                String intro = mainobj.getString("intro");
+                intro = intro.replaceAll("[\\[\\]\\(\\)]", "");
+                introtextarray = intro.split(",");
+                Log.e("Json String", "JSON String"+ introtextarray[0]);
+
+                 /*
+                for (int i = 0; i < jsonarr.length(); i++) {
+                    JSONObject jsonObject = jsonarr.optJSONObject(i);
+                    // getting data from individual object
+                    String intro = jsonObject.getString("intro");
+                    //introtextarray = intro.split(",");
+                    Log.e("Json String", "JSON String"+ introtextarray[0]);
+
+
+                }
+                */
+
+            }
+
+        } catch(Exception e){
             e.printStackTrace();
         }
 
 
-
-
-
-        img.setImageResource(R.drawable.intro);
 
 
 
@@ -109,9 +151,37 @@ public class StoryActivity extends MainActivity {
     public void onClickView (View v) {
 
 
-        textview.setText("Hello world!");
+        textview.setText(introtextarray[0]);
+
+        Log.e("Json String", "JSON String"+ introtextarray[0]);
+
+
 
     }
+
+
+
+    public String loadJSONFromAsset() {
+        try {
+            dataStream = assetManager.open("Data/Data.json");
+            size = dataStream.available();
+            byte[] buffer = new byte[size];
+            dataStream.read(buffer);
+            dataStream.close();
+            jsonText = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return jsonText;
+    }
+
+
+
+
+
+
+
 
 
 
@@ -124,7 +194,7 @@ public class StoryActivity extends MainActivity {
 
             img.setImageBitmap(image);
 
-            textarray[0] = "Load something from JSON and put it here";
+
 
             if ( imageStream != null)
                 Log.e("Error", "Failed to load");
@@ -146,7 +216,7 @@ public class StoryActivity extends MainActivity {
 
             img.setImageBitmap(image);
 
-            textarray[0] = "Load something from JSON and put it here";
+            introtextarray[0] = "Load something from JSON and put it here";
 
             if ( imageStream != null)
                 Log.e("Error", "Failed to load");
