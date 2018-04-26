@@ -15,3 +15,4 @@
 21/4/2018 - Finished base classes for loading images and data movement array to be done next (Chris)
 22/4/2018 - Start matrix to track player movements(Duc)
 23/4/2018 - JSON loading completed. (Chris)
+26/4/2018 - JSON for next few dungeons done, timer class for text. (Chris)

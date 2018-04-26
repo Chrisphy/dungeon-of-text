@@ -25,6 +25,7 @@ import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Timer;
 
 public class StoryActivity extends MainActivity {
 
@@ -34,7 +35,6 @@ public class StoryActivity extends MainActivity {
     ImageView img;
     TextView textview;
     JSONObject jsonobj;
-    JSONArray jsonarr;
 
     //Assets
     AssetManager assetManager;
@@ -47,11 +47,14 @@ public class StoryActivity extends MainActivity {
 
 
     //Arrays
-    String[] introtextarray = new String[50];
+    String[] introtextarray = new String[500];
+    String[] firstDungeon = new String[50];
+
 
 
     //Int
     int size;
+    int Count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,14 +150,28 @@ public class StoryActivity extends MainActivity {
     }
 
 
+    //Change this to a timer progression instead of onclick? Discussion with duc necessary.
 
-    public void onClickView (View v) {
+    public void timerHelper(){
+        Boolean bool = false;
+
+        if (bool == false){
+            Timer time = new Timer();
 
 
-        textview.setText(introtextarray[0]);
+        }
 
-        Log.e("Json String", "JSON String"+ introtextarray[0]);
 
+
+
+    }
+
+
+
+    public void nextText() {
+
+            textview.setText(introtextarray[Count]);
+            Count++;
 
 
     }
