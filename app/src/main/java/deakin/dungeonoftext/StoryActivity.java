@@ -37,7 +37,7 @@ public class StoryActivity extends MainActivity {
 
 
     //Array for text to load into
-    String textarray[] = new String[50];
+    String[] textarray = new String[50];
 
 
     @Override
