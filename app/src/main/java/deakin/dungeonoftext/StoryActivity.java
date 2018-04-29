@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -48,13 +49,17 @@ public class StoryActivity extends MainActivity {
 
     //Arrays
     String[] introtextarray = new String[500];
-    String[] firstDungeon = new String[50];
+    String[] textArray = new String[1000];
 
 
 
     //Int
     int size;
     int Count = 0;
+
+
+    Handler h = new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +88,14 @@ public class StoryActivity extends MainActivity {
 
         loadJSONFromAsset();
 
+        textArray("intro");
+
+
+        textLoad();
+
+
+
+        /*
         try{
             // creating json array from json object
             if(jsonText != null){
@@ -96,7 +109,7 @@ public class StoryActivity extends MainActivity {
                 introtextarray = intro.split(",");
                 Log.e("Json String", "JSON String"+ introtextarray[0]);
 
-                 /*
+
                 for (int i = 0; i < jsonarr.length(); i++) {
                     JSONObject jsonObject = jsonarr.optJSONObject(i);
                     // getting data from individual object
@@ -106,7 +119,7 @@ public class StoryActivity extends MainActivity {
 
 
                 }
-                */
+
 
             }
 
@@ -114,13 +127,15 @@ public class StoryActivity extends MainActivity {
             e.printStackTrace();
         }
 
-
+*/
 
 
 
         upbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                levelOne();
 
             }
         });
@@ -131,6 +146,8 @@ public class StoryActivity extends MainActivity {
         leftbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                levelTwo();
 
             }
         });
@@ -152,29 +169,75 @@ public class StoryActivity extends MainActivity {
 
     //Change this to a timer progression instead of onclick? Discussion with duc necessary.
 
-    public void timerHelper(){
-        Boolean bool = false;
-
-        if (bool == false){
-            Timer time = new Timer();
+    //todo Timer class
+    //todo Pass in array needed from JSON
+    //todo Movement
 
 
+    public void textLoad() {
+
+
+        h.postDelayed(new Runnable(){
+            public void run(){
+            //change your text here
+            if(Count <= textArray.length){
+                textview.setText(textArray[Count]);
+                Count++;
+            }
+            else{
+                Count = 0;
+                return;
+            }
+            }
+        }, 5000);
+
+
+    }
+
+    public void clickEvent(View view){
+        if(Count < textArray.length || textArray == null){
+            textview.setText(textArray[Count]);
+            Count++;
+        }
+        else{
+            textview.setText("Click on any of the 4 buttons to move.");
+        }
+    }
+
+
+
+
+    public String[] textArray(String str){
+
+        try{
+            // creating json array from json object
+            if(jsonText != null){
+                jsonobj = new JSONObject(jsonText);
+                // Log.e("Json String", "JSON String"+jsonobj.toString());
+
+                JSONObject mainobj = jsonobj.getJSONObject("Story");
+
+                String temp = mainobj.getString(str);
+
+                temp = temp.substring(1,temp.length()-1);
+
+                temp = temp.replaceAll("[\\[\\]\\(\\)]", "");
+
+                textArray = temp.split(",");
+
+
+            }
+
+        } catch(Exception e){
+            e.printStackTrace();
         }
 
-
-
-
-    }
-
-
-
-    public void nextText() {
-
-            textview.setText(introtextarray[Count]);
-            Count++;
-
+        return textArray;
 
     }
+
+
+
 
 
 
@@ -195,17 +258,10 @@ public class StoryActivity extends MainActivity {
 
 
 
-
-
-
-
-
-
-
-    public void levelOne() {
+    public void setImage(String str){
 
         try {
-            imageStream = assetManager.open("images/intro.jpeg");
+            imageStream = assetManager.open("images/" + str);
 
             Bitmap image = BitmapFactory.decodeStream(imageStream);
 
@@ -215,9 +271,25 @@ public class StoryActivity extends MainActivity {
 
             if ( imageStream != null)
                 Log.e("Error", "Failed to load");
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+
+
+
+    public void levelOne() {
+
+
+        setImage("dungeon-1.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("first-dungeon");
 
 
     }
@@ -226,20 +298,48 @@ public class StoryActivity extends MainActivity {
 
     public void levelTwo() {
 
-        try {
-            imageStream = assetManager.open("images/intro.jpg");
+        setImage("dungeon-2.png");
 
-            Bitmap image = BitmapFactory.decodeStream(imageStream);
+        textview.setText("*Eerie noises*");
 
-            img.setImageBitmap(image);
+        textArray("second-dungeon");
 
-            introtextarray[0] = "Load something from JSON and put it here";
 
-            if ( imageStream != null)
-                Log.e("Error", "Failed to load");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    }
+
+
+
+    public void levelThree() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
+
+
+    public void levelFour() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
+
+
+    public void levelFive() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
 
 
     }
