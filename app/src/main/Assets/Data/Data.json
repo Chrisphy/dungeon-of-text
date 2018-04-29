@@ -9,7 +9,6 @@
     }
   ],
   "Monster": [
-    {},
     {
       "DetailsAlive": {
         "name": "The thing",
@@ -24,24 +23,65 @@
     }
   ],
   "Story": {
-    "intro-p1": "It was a cold dark and rainy night. This was a town where not many people lived.",
-    "intro-p2": "The wind rustled as a detective stood looking at an entrance to a cave.",
-    "intro-p3": "\"Hmmm\" he thought as the rain kept falling, this was the last reported sighting.",
-    "intro-p4": "There had been a series of dissapearing incidents for the past few months.",
-    "intro-p5": "The detective was slightly on edge as he peered into the deep crevice. All he saw was darkness.",
-    "intro-p6": "The detective, being young and unafraid then decided to directly go in.",
-    "intro-p7": "\"Maybe I'll be able to find some clues\", he thought.",
-    "intro-p8": "Little did the detective know that his life would change forever...",
-    "first-dungeon-p1": "Chocolate cake apple pie tart pudding marshmallow apple pie pie gummi bears candy canes.",
-    "first-dungeon-p2": "Liquorice biscuit powder carrot cake jelly beans cheesecake lemon drops apple pie. Muffin bear",
-    "first-dungeon-p3": "Marzipan danish wafer bonbon. Candy pie toffee powder liquorice chocolate bar. Chocolate bar lemon drops candy tootsie roll.",
-    "first-dungeon-p4": "Macaroon danish fruitcake lollipop croissant pie marshmallow cake marshmallow. Topping gummi bears.",
-    "first-dungeon-p5": "Cheesecake cake cookie. Bonbon cookie cupcake tart lemon drops donut. Marshmallow jelly ice cream fruitcake wafer cake. ",
-    "first-dungeon-p6": "Powder jelly beans liquorice dessert. Croissant lollipop chocolate bar liquorice caramels jelly beans apple pie.",
-    "first-dungeon-p7": "Sugar plum pie marzipan cheesecake gingerbread gummi bears. Candy biscuit liquorice wafer macaroon jelly-o.",
-    "first-dungeon-p8": "Dessert gingerbread candy canes oat cake. Croissant pastry carrot cake sweet sugar plum sugar plum",
-    "first-dungeon-p9": "Fruitcake donut sweet lemon drops gummies gummies. Chocolate gingerbread pudding.",
-    "first-dungeon-p10": "Jujubes tart candy marzipan gingerbread cheesecake cookie brownie jujubes. Sweet roll topping caramels oat cake pastry.",
+    "intro": ["It was a cold dark and rainy night. This was a town where not many people lived.",
+      "The wind rustled as a detective stood looking at an entrance to a cave.",
+      "\"Hmmm\" he thought as the rain kept falling this was the last reported sighting.",
+      "There had been a series of dissapearing incidents for the past few months.",
+      "The detective was slightly on edge as he peered into the deep crevice. All he saw was darkness.",
+      "The detective being young and unafraid then decided to directly go in.",
+      "\"Maybe I'll be able to find some clues\" he thought.",
+      "Little did the detective know that his life would change forever..."],
+    "first-dungeon": ["\"Huh where am I?\" The detective woke up confused and disoriented. ",
+      "He remembered going into the dungeon and then he fell down blacking out. His mind was all foggy.",
+      "Whooshing noises could be heard inside the Dungeon it gave the place a macabre feeling.",
+      "There was pitch darkness and stone columns around. The detective didn't expect the inside to look like this.",
+      "Turning around the detective only saw darkness.",
+      "\"Guess I'm stuck here for now\" The detective chose to just explore the place",
+      "The survivors were probably somewhere in this dungeon",
+      "~~ Player your job is to help the detective find the missing people and bring them back.",
+      "If you can't find them find clues as to why they dissapeared there must be a reason!",
+      "Click on the [right] [left] [up] or [down] arrow keys to move around the place, some places might be off limits and require something special",
+      "Luckily for us the detective brought along a small backpack. It can fit 4 items that you might need to solve the mystery or unlock doors!",
+      "Good luck player! ~~"],
+    "second-dungeon": ["You step into the room on the left and you see nothing much, the place looks walled off",
+      "Is that something shining on the ground? It looks like a key... Try click on it and pick it up....",
+      "Whooshing noises could be heard inside the Dungeon, it gave the place a macabre feeling.",
+      "You just picked up a key!, Good job player! Let's head back and try another room!"],
+
+    "third-dungeon": ["You step into the room on the right and you see nothing much, the place looks walled off",
+      "Let's try another room...."],
+
+    "fourth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "Let's go and venture deeper",
+      "Eerie noises are all around, keep going forward and think of nice thoughts..."],
+
+    "fifth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
+
+    "sixth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
+
+    "seventh-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
+
+    "eighth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
+
+    "ninth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
+
+    "tenth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
+
+    "eleventh-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+      "The survivors must be here somewhere I hope",
+      "This place was still giving the detective the creeps!"]
 
   }
 }

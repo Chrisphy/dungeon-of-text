@@ -19,3 +19,10 @@ The game will be developed for Android using tools such as the Android SDK.
 - I couldn't find your text-based data. Create a root folder "data/" and put all your JSON files in there.
 
 
+# Henry comments 27/April
+- This file still needs compile instructions, and directory explanation so I know where to find stuff.
+- Your changelog - maybe format it in markdown so it's readable in github (view it from github web page and you'll see what I mean)
+- Your data has made a great start. I'd suggest building it up a bit more, given we're in Week 7 now.
+
+
+
