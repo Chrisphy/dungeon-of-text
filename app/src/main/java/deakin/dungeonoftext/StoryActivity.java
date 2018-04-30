@@ -357,7 +357,7 @@ public class StoryActivity extends MainActivity {
     public void movement() {
 
         //TODO movement array here to keep track of where the player is to load the level classes above
-
+        //Will assign later. Preparing in another class.
 
     }
 

@@ -32,3 +32,5 @@
 26/4/2018 - . JSON for next few dungeons done, timer class for text (Chris)
 
 26/4/2018 - . Gotten level one completed and movement is 40% done, images loading and text loading done (Chris)
+
+27/04/2018 - Try to handle movement through JSON file - Incompleted(Duc)

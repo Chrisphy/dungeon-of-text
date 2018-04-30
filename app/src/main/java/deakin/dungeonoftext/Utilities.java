@@ -1,5 +1,11 @@
 package deakin.dungeonoftext;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Utilities {
     //Declare variables
     static int x = 4, y = 4, a = 0, b = 0;
@@ -55,5 +61,34 @@ public class Utilities {
         }
         return tempInt;
     }
+    /**Function to limited navigation buttons - May assign to button later
+    static void checkButtons(){
+        if(Utilities.a == 0) {
+            dwnbtn.setVisibility(View.GONE);
+        }else {dwnbtn.setVisibility(View.VISIBLE);}
+        if(Utilities.a == 3) {
+            upbtn.setVisibility(View.GONE);
+        }else {upbtn.setVisibility(View.VISIBLE);}
+        if(Utilities.b == 0) {
+            rightbtn.setVisibility(View.GONE);
+        }else {rightbtn.setVisibility(View.VISIBLE);}
+        if(Utilities.b == 3) {
+            leftbtn.setVisibility(View.GONE);
+        }else {leftbtn.setVisibility(View.VISIBLE);}
+    }
+     */
+    //Function to write progress to JSON file
+    static void writeMatrixToFile() throws JSONException{
+        JSONObject obj = new JSONObject();
+        obj.put("Matrix1", matrixToString());
 
+        try {
+            FileWriter file = new FileWriter("Data/move.json");
+            file.write(obj.toString());
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
+    //Function to read progress to JSON file
 }
