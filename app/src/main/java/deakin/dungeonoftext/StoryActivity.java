@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -59,6 +60,10 @@ public class StoryActivity extends MainActivity {
 
 
     Handler h = new Handler();
+
+
+
+
 
 
     @Override
@@ -176,7 +181,6 @@ public class StoryActivity extends MainActivity {
 
     public void textLoad() {
 
-
         h.postDelayed(new Runnable(){
             public void run(){
             //change your text here
@@ -189,7 +193,7 @@ public class StoryActivity extends MainActivity {
                 return;
             }
             }
-        }, 5000);
+        }, 1000);
 
 
     }
@@ -290,6 +294,9 @@ public class StoryActivity extends MainActivity {
         textview.setText("*Eerie noises*");
 
         textArray("first-dungeon");
+
+
+
 
 
     }
