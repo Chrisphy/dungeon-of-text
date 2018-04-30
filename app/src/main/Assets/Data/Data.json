@@ -31,7 +31,7 @@
       "The detective being young and unafraid then decided to directly go in.",
       "\"Maybe I'll be able to find some clues\" he thought.",
       "Little did the detective know that his life would change forever..."],
-    "first-dungeon": ["\"Huh where am I?\" The detective woke up confused and disoriented. ",
+    "dungeon-1": ["\"Huh where am I?\" The detective woke up confused and disoriented. ",
       "He remembered going into the dungeon and then he fell down blacking out. His mind was all foggy.",
       "Whooshing noises could be heard inside the Dungeon it gave the place a macabre feeling.",
       "There was pitch darkness and stone columns around. The detective didn't expect the inside to look like this.",
@@ -43,43 +43,43 @@
       "Click on the [right] [left] [up] or [down] arrow keys to move around the place, some places might be off limits and require something special",
       "Luckily for us the detective brought along a small backpack. It can fit 4 items that you might need to solve the mystery or unlock doors!",
       "Good luck player! ~~"],
-    "second-dungeon": ["You step into the room on the left and you see nothing much, the place looks walled off",
+    "dungeon-2": ["You step into the room on the left and you see nothing much, the place looks walled off",
       "Is that something shining on the ground? It looks like a key... Try click on it and pick it up....",
       "Whooshing noises could be heard inside the Dungeon, it gave the place a macabre feeling.",
       "You just picked up a key!, Good job player! Let's head back and try another room!"],
 
-    "third-dungeon": ["You step into the room on the right and you see nothing much, the place looks walled off",
+    "dungeon-3": ["You step into the room on the right and you see nothing much, the place looks walled off",
       "Let's try another room...."],
 
-    "fourth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-4": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "Let's go and venture deeper",
       "Eerie noises are all around, keep going forward and think of nice thoughts..."],
 
-    "fifth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-5": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"],
 
-    "sixth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-6": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"],
 
-    "seventh-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-7": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"],
 
-    "eighth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-8": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"],
 
-    "ninth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-9": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"],
 
-    "tenth-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-10": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"],
 
-    "eleventh-dungeon": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
+    "dungeon-11": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
       "The survivors must be here somewhere I hope",
       "This place was still giving the detective the creeps!"]
 

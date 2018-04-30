@@ -288,16 +288,11 @@ public class StoryActivity extends MainActivity {
 
     public void levelOne() {
 
-
         setImage("dungeon-1.png");
 
         textview.setText("*Eerie noises*");
 
-        textArray("first-dungeon");
-
-
-
-
+        textArray("dungeon-1");
 
     }
 
@@ -309,7 +304,7 @@ public class StoryActivity extends MainActivity {
 
         textview.setText("*Eerie noises*");
 
-        textArray("second-dungeon");
+        textArray("dungeon-2");
 
 
     }
