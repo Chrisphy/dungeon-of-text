@@ -364,33 +364,108 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     }
 
+    public void levelSix() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
 
 
+    }
 
+    public void levelSeven() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
+
+
+    public void levelEight() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
+
+    public void levelNine() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
+
+    public void levelTen() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
+
+
+    public void levelEleven() {
+
+        setImage("dungeon-2.png");
+
+        textview.setText("*Eerie noises*");
+
+        textArray("second-dungeon");
+
+
+    }
     public void checkRoom() {
         Utilities.room = Utilities.getRoom();
         switch (Utilities.room){
             case 1:
+                levelOne();
                 break;
             case 2:
+                levelTwo();
                 break;
             case 3:
+                levelThree();
                 break;
             case 4:
+                levelFour();
                 break;
             case 5:
+                levelFive();
                 break;
             case 6:
+                levelSix();
                 break;
             case 7:
+                levelSeven();
+                break;
+            case 8:
+                levelEight();
+                break;
+            case 9:
+                levelNine();
                 break;
             case 10:
+                levelTen();
                 break;
             case 11:
-                break;
-            case 13:
-                break;
-            case 14:
+                levelEleven();
                 break;
         }
 

@@ -34,3 +34,5 @@
 26/4/2018 - Gotten level one completed and movement is 40% done, images loading and text loading done (Chris)
 
 27/04/2018 - Try to handle movement through JSON file - Incompleted(Duc)
+
+5/05/2018 - Finished off a majority of JSON data file and added images + movement (Chris)
