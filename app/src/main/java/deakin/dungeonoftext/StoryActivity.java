@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +30,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Timer;
 
-public class StoryActivity extends MainActivity {
+public class StoryActivity extends MainActivity implements View.OnClickListener {
 
 
     //Views
@@ -61,7 +62,11 @@ public class StoryActivity extends MainActivity {
 
     Handler h = new Handler();
 
-
+    //Navigation buttons
+    Button upbtn;
+    Button dwnbtn;
+    Button leftbtn;
+    Button rightbtn;
 
 
 
@@ -72,14 +77,27 @@ public class StoryActivity extends MainActivity {
         setContentView(R.layout.activity_story);
 
 
-        int usermovement_number = 0;
 
 
-
-        final Button upbtn = (Button) findViewById(R.id.up_move);
+        /**
+         final Button upbtn = (Button) findViewById(R.id.up_move);
         final Button leftbtn = (Button) findViewById(R.id.left_move);
         final Button rightbtn = (Button) findViewById(R.id.right_move);
-
+         */
+        //Initial navigation buttons
+        upbtn = (Button) findViewById(R.id.up_move);
+        dwnbtn = (Button)findViewById(R.id.down_move);
+        leftbtn = (Button) findViewById(R.id.left_move);
+        rightbtn = (Button) findViewById(R.id.right_move);
+        //Set navigation button response when clicking
+        upbtn.setOnClickListener(this);
+        dwnbtn.setOnClickListener(this);
+        leftbtn.setOnClickListener(this);
+        rightbtn.setOnClickListener(this);
+        //Hide unnecessary navigation buttons
+        dwnbtn.setVisibility(View.INVISIBLE);
+        leftbtn.setVisibility(View.INVISIBLE);
+        rightbtn.setVisibility(View.INVISIBLE);
 
         img = (ImageView) findViewById(R.id.storybg);
         textview = (TextView) findViewById(R.id.textView);
@@ -89,7 +107,7 @@ public class StoryActivity extends MainActivity {
         img.setImageResource(R.drawable.intro);
 
 
-
+        Utilities.initialMatrix();
 
         loadJSONFromAsset();
 
@@ -132,7 +150,7 @@ public class StoryActivity extends MainActivity {
             e.printStackTrace();
         }
 
-*/
+
 
 
 
@@ -168,7 +186,7 @@ public class StoryActivity extends MainActivity {
         });
 
 
-
+    */
     }
 
 
@@ -349,12 +367,84 @@ public class StoryActivity extends MainActivity {
 
 
 
-    public void movement() {
+    public void checkRoom() {
+        Utilities.room = Utilities.getRoom();
+        switch (Utilities.room){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+        }
 
-        //TODO movement array here to keep track of where the player is to load the level classes above
-        //Will assign later. Preparing in another class.
+
 
     }
+    //Function to hide navigation refer to map
+    public void checkButtons(){
+        if(Utilities.a != 0 && Utilities.b == 2) {
+            dwnbtn.setVisibility(View.VISIBLE);
+        }else {dwnbtn.setVisibility(View.INVISIBLE);}
+        if(Utilities.a != 3 && Utilities.b == 2) {
+            upbtn.setVisibility(View.VISIBLE);
+        }else {upbtn.setVisibility(View.INVISIBLE);}
+        if(Utilities.b == 0 || (Utilities.a == 0 && Utilities.b == 1) || (Utilities.a == 2 && Utilities.b == 2)
+                || (Utilities.a == 2 && Utilities.b == 1) || (Utilities.a == 3 && Utilities.b == 1)) {
+            rightbtn.setVisibility(View.INVISIBLE);
+        }else {rightbtn.setVisibility(View.VISIBLE);}
+        if(Utilities.b == 3|| (Utilities.a == 3 && Utilities.b == 2 || (Utilities.a == 2 && Utilities.b == 0)) ) {
+            leftbtn.setVisibility(View.INVISIBLE);
+        }else {leftbtn.setVisibility(View.VISIBLE);}
+    }
 
-
+    //Function which is called when navigation button is clicked
+    public void onClick(View v){
+        if(v.getId() == R.id.up_move){
+            if(Utilities.level == 0){
+                Utilities.a=0;
+                Utilities.b=2;
+                Utilities.matrix[Utilities.a][Utilities.b]=1;
+                Utilities.level = 1;
+                Toast.makeText(this,"Go to level 1", Toast.LENGTH_LONG).show();
+                checkButtons();
+                levelOne();
+            }else{
+                Utilities.moveUp();
+                checkButtons();
+                Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+            }
+        }
+        if(v.getId() == R.id.down_move){
+            Utilities.moveDown();
+            checkButtons();
+            Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+        }
+        if(v.getId() == R.id.left_move){
+            Utilities.moveLeft();
+            checkButtons();
+            Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+        }
+        if(v.getId() == R.id.right_move){
+            Utilities.moveRight();
+            checkButtons();
+            Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+        }
+    }
 }

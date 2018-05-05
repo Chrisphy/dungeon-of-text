@@ -1,14 +1,9 @@
 package deakin.dungeonoftext;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class Utilities {
     //Declare variables
-    static int x = 4, y = 4, a = 0, b = 0;
+    static int x = 4, y = 4, a = 0, b = 0, level = 0;
+    static int room;
     static int[][] matrix = new int[x][y];
 
     //Function to intitial matrix to track player's progress
@@ -34,11 +29,11 @@ public class Utilities {
         matrix[a][b] = 1;
     }
     static void moveLeft(){
-        a++;
+        b++;
         matrix[a][b] = 1;
     }
     static void moveRight(){
-        a--;
+        b--;
         matrix[a][b] = 1;
     }
     //Function to convert matrix to an string
@@ -61,6 +56,10 @@ public class Utilities {
         }
         return tempInt;
     }
+
+    static int getRoom(){
+        return a*4+b;
+    }
     /**Function to limited navigation buttons - May assign to button later
     static void checkButtons(){
         if(Utilities.a == 0) {
@@ -77,18 +76,4 @@ public class Utilities {
         }else {leftbtn.setVisibility(View.VISIBLE);}
     }
      */
-    //Function to write progress to JSON file
-    static void writeMatrixToFile() throws JSONException{
-        JSONObject obj = new JSONObject();
-        obj.put("Matrix1", matrixToString());
-
-        try {
-            FileWriter file = new FileWriter("Data/move.json");
-            file.write(obj.toString());
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-
-    }
-    //Function to read progress to JSON file
 }
