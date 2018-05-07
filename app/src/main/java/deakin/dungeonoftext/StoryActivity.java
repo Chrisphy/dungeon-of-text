@@ -50,7 +50,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
 
     //Arrays
-    String[] introtextarray = new String[500];
     String[] textArray = new String[1000];
 
 
@@ -113,9 +112,9 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("intro");
 
-
         textLoad();
 
+        Log.e("Json String", "JSON String"+ textArray[0]);
 
 
         /*
@@ -311,6 +310,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
         textview.setText("*Eerie noises*");
 
         textArray("dungeon-1");
+        
 
     }
 
@@ -318,7 +318,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     public void levelTwo() {
 
-        setImage("dungeon-2.png");
+        setImage("dungeon-4.png");
 
         textview.setText("*Eerie noises*");
 
@@ -343,7 +343,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     public void levelFour() {
 
-        setImage("dungeon-2.png");
+        setImage("dungeon-1.png");
 
         textview.setText("*Eerie noises*");
 
@@ -366,7 +366,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     public void levelSix() {
 
-        setImage("dungeon-2.png");
+        setImage("dungeon-6.png");
 
         textview.setText("*Eerie noises*");
 
@@ -377,7 +377,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     public void levelSeven() {
 
-        setImage("dungeon-2.png");
+        setImage("dungeon-7.png");
 
         textview.setText("*Eerie noises*");
 
@@ -400,7 +400,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     public void levelNine() {
 
-        setImage("dungeon-2.png");
+        setImage("dungeon-4.png");
 
         textview.setText("*Eerie noises*");
 
@@ -411,7 +411,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     public void levelTen() {
 
-        setImage("dungeon-2.png");
+        setImage("dungeon-8.png");
 
         textview.setText("*Eerie noises*");
 
@@ -425,7 +425,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         setImage("dungeon-2.png");
 
-        textview.setText("*Eerie noises*");
+        textview.setText("*You hear a lot of movement in the darkness...*");
 
         textArray("second-dungeon");
 
@@ -435,37 +435,37 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
         Utilities.room = Utilities.getRoom();
         switch (Utilities.room){
             case 1:
-                levelOne();
-                break;
-            case 2:
-                levelTwo();
-                break;
-            case 3:
                 levelThree();
                 break;
+            case 2:
+                levelOne();
+                break;
+            case 3:
+                levelTwo();
+                break;
             case 4:
-                levelFour();
+                levelSix();
                 break;
             case 5:
                 levelFive();
                 break;
             case 6:
-                levelSix();
+                levelFour();
                 break;
             case 7:
-                levelSeven();
-                break;
-            case 8:
-                levelEight();
-                break;
-            case 9:
                 levelNine();
                 break;
             case 10:
-                levelTen();
+                levelSeven();
                 break;
             case 11:
+                levelEight();
+                break;
+            case 13:
                 levelEleven();
+                break;
+            case 14:
+                levelTen();
                 break;
         }
 
@@ -503,22 +503,26 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
             }else{
                 Utilities.moveUp();
                 checkButtons();
+                checkRoom();
                 Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
             }
         }
         if(v.getId() == R.id.down_move){
             Utilities.moveDown();
             checkButtons();
+            checkRoom();
             Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
         }
         if(v.getId() == R.id.left_move){
             Utilities.moveLeft();
             checkButtons();
+            checkRoom();
             Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
         }
         if(v.getId() == R.id.right_move){
             Utilities.moveRight();
             checkButtons();
+            checkRoom();
             Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
         }
     }
