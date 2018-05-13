@@ -11,3 +11,9 @@
 5) dungeon-1 (all images listed with dungeon are the same but with different permutations) || https://opengameart.org/content/dungeon-tiles-0 || https://opengameart.org/content/dungeon-tiles-0 || Retrieved 1/4/2018
 
 6) bgmusic.mp3 - Copyright Matthew Pablo || https://opengameart.org/content/theme-of-com-mecha || CC-BY 3.0 License || Retrieved 29/4/2018
+
+7) monster.png - Nurse - Copyright Sylvileex || https://opengameart.org/content/woman-nurse-character || CC-BY 3.0 License || Retrieved 13/5/2018
+
+8) monster.png - Woman Soldier - Copyright Sylvileex || https://opengameart.org/content/woman-soldier-character || CC-BY 3.0 License || Retrieved 13/5/2018
+
+9) monster.png - Business man - Copyright Grahhhhh || https://opengameart.org/content/business-man-1 || Public Domain || Retrieved 13/5/2018
