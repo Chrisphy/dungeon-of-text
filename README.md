@@ -13,6 +13,22 @@ The game will be developed for Android using tools such as the Android SDK.
 1) Chris Chong - 216128411
 2) Duc Nguyen - 216197049
 
+
+### Compile Instructions
+1) Download from github
+2) Open using Android Studio 
+3) Install any dependencies as specified by Android Studio popups
+4) Click the run button to compile and run the application
+
+
+### Directory explanation
+- Main project files stored in ./app/
+- Asset files stored in ./app/main/assets
+- Image files stored in ./app/main/assets/images
+- Image files stored in ./app/main/assets/Data
+- Activity files stored in ./app/main/java/deakin.dungeonoftext/
+
+
 # Henry comments 13/April
 - Not enough commits + changelog items to pass at this frequency.
 - Changelog is empty.
