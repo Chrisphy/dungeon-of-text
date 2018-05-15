@@ -430,7 +430,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     }
 
 
-
+    //Function to check current room and load appropriate room
     public void checkRoom() {
         Utilities.room = Utilities.getRoom();
         switch (Utilities.room){
@@ -497,33 +497,33 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
                 Utilities.b=2;
                 Utilities.matrix[Utilities.a][Utilities.b]=1;
                 Utilities.level = 1;
-                Toast.makeText(this,"Go to level 1", Toast.LENGTH_LONG).show();
+               // Toast.makeText(this,"Go to level 1", Toast.LENGTH_LONG).show();
                 checkButtons();
                 levelOne();
             }else{
                 Utilities.moveUp();
                 checkButtons();
                 checkRoom();
-                Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
             }
         }
         if(v.getId() == R.id.down_move){
             Utilities.moveDown();
             checkButtons();
             checkRoom();
-            Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
         }
         if(v.getId() == R.id.left_move){
             Utilities.moveLeft();
             checkButtons();
             checkRoom();
-            Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
         }
         if(v.getId() == R.id.right_move){
             Utilities.moveRight();
             checkButtons();
             checkRoom();
-            Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, String.valueOf(Utilities.getRoom()), Toast.LENGTH_LONG).show();
         }
     }
 
