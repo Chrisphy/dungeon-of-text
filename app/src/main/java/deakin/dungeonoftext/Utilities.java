@@ -6,7 +6,7 @@ public class Utilities {
     static int room;
     static int[][] matrix = new int[x][y];
 
-    //Function to intitial matrix to track player's progress
+    //Function to initial matrix to track player's progress
     static void initialMatrix(){
         for(int i=0; i<x; i++){
             for(int j=0;j<y;j++){
@@ -56,24 +56,9 @@ public class Utilities {
         }
         return tempInt;
     }
-
+    //Function to get the current room which player in
     static int getRoom(){
         return a*4+b;
     }
-    /**Function to limited navigation buttons - May assign to button later
-    static void checkButtons(){
-        if(Utilities.a == 0) {
-            dwnbtn.setVisibility(View.GONE);
-        }else {dwnbtn.setVisibility(View.VISIBLE);}
-        if(Utilities.a == 3) {
-            upbtn.setVisibility(View.GONE);
-        }else {upbtn.setVisibility(View.VISIBLE);}
-        if(Utilities.b == 0) {
-            rightbtn.setVisibility(View.GONE);
-        }else {rightbtn.setVisibility(View.VISIBLE);}
-        if(Utilities.b == 3) {
-            leftbtn.setVisibility(View.GONE);
-        }else {leftbtn.setVisibility(View.VISIBLE);}
-    }
-     */
+
 }
