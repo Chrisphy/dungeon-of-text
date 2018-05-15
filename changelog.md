@@ -35,6 +35,12 @@
 
 27/04/2018 - Try to handle movement through JSON file - Incompleted(Duc)
 
-5/05/2018 - Finished off a majority of JSON data file and added images + movement (Chris)
+04/05/2018 - Plug movement to navigation buttons(Duc)
+
+05/05/2018 - Finished off a majority of JSON data file and added images + movement (Chris)
+
+07/05/2018 - Assign rooms to be loaded based on movements(Duc)
 
 13/05/2018 - Finishing touches on text loading and fixing bugs, bg music, more JSON data and item picking to be worked on (Chris)
+
+13/05/2018 - Wrap up movements for level 1(Duc)
