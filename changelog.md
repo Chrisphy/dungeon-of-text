@@ -45,4 +45,4 @@
 
 13/05/2018 - Wrap up movements for level 1(Duc)
 
-15/05/2018 - Update icons for app (Duc)
+16/05/2018 - Finished off all the known bugs/added comments, modified the JSON file for current status and playing background music.

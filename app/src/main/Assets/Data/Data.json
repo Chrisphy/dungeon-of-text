@@ -3,7 +3,7 @@
     "details": {
       "name": "Detective McGee",
       "health": 100,
-      "invlimit": 3
+      "gunPresence": false
     }
   }],
   "Monster": [{
@@ -29,7 +29,7 @@
       "Little did the detective know that his life would change forever..."
     ],
 
-    "dungeon-1": ["'Huh where am I?' The detective woke up confused and disoriented. ",
+    "dungeon-1": ["Huh where am I? The detective woke up confused and disoriented.",
       "He remembered going into the dungeon and then he fell down blacking out. His mind was all foggy.",
       "Whooshing noises could be heard inside the Dungeon it gave the place a macabre feeling.",
       "There was pitch darkness and stone columns around. The detective didn't expect the inside to look like this.",
@@ -38,65 +38,97 @@
       "The survivors were probably somewhere in this dungeon",
       "~~ Player your job is to help the detective find the missing people and bring them back.",
       "If you can't find them find clues as to why they dissapeared there must be a reason!",
-      "Click on the [right] [left] [up] or [down] arrow keys to move around the place, some places might be off limits and require something special",
+      "Click on the arrow keys to move around the place some places might be off limits and require something special",
       "Luckily for us the detective brought along a small backpack. It can fit 4 items that you might need to solve the mystery or unlock doors!",
       "Good luck player! ~~"
     ],
 
-    "dungeon-2": ["You step into the room on the left and you see nothing much, the place looks walled off",
+    "dungeon-2": ["You step into the room and you see nothing much the place looks scary",
       "You can however see a bit of an entrance in the darkness",
       "There might be clues up there maybe go explore and see if it's true",
       "Proceed with extreme caution who knows what's up there. It could be anything!",
       "'Oh I hope the survivors are here' lamented the detective."
     ],
 
-    "dungeon-3": ["You step into the room on the right and you see nothing much, the place looks walled off",
+    "dungeon-3": ["You step into the room and you see nothing much the place looks scary",
+      "I know! I'll just count sheep and maybe it won't be so scary",
+      "You sir are a genius detective brilliant in fact. I wonder why I'm still not promoted",
+      "'Sigh' it must be because God hates smart men such as I",
+      "While the detective was talking nonsense as usual the cold wind in the dungeon started blowing",
+      "Gee this place is freezing cold I should've brought my jacket",
+      "While shaking his head the detective shivered when he felt some wind blow against his neck",
       "Let's try another room...."
     ],
 
-    "dungeon-4": ["You step into the room in front and see pure darkness leading forward, the place looks scary",
-      "Hmm this place looks walled off I see a keyhole for three keys in front. Maybe I need to go and find the keys",
-      "wonder if the keys are going to be somewhere here. I sure hope so.",
-      "[Keys will be mentioned if there is one click yes or no to pick it up. The detective can carry 3 of these keys.] "
+    "dungeon-4": ["You step into the room and you see nothing much the place looks scary",
+      "Hmm this place looks strange I wonder where I should go ",
+      "Oh well this is no issue for the genius me ",
+      "I shall think deeply about this complex issue and solve it",
+      "As if mimicking sherlock holmes the detective smoked his imaginary pipe",
+      "Gosh life is so tough when you're so intelligent",
+      "I know! Let's go that way it looks pretty safe I mean it looks like the survivors are there!",
+      "[Let's just ignore the detective and pick a room player...] "
     ],
 
-    "dungeon-5": ["You step into the room to your left the front is walled off but it looks like you can proceed left again....",
+    "dungeon-5": ["You step into the room and you see nothing much the place looks scary",
       "The survivors must be here somewhere I hope",
-      "'I really hate dark places' the detective lamented",
-      "'I should've lived my dream as a monk in tibet",
+      "'I really hate dark places' the detective lamented'",
+      "'I should've lived my dream as a monk in tibet'",
+      "'Yes... a monk that sounds pretty comfortable I could just sleep all day'",
+      "'Then I'd get up and go get free food from the people'",
+      "'Maybe even learn Kung Fu.... Hey maybe I can even be the next bruce lee'",
       "'Ok nevermind that sounds too boring plus I'd need to move to Tibet....'",
       "'Where even is Tibet....' Whilst the detective was talking to himself a cold wind blew as if beckoning him...",
       "This place was still giving the detective the creeps!"
     ],
 
-    "dungeon-6": ["The whole place looks walled off except for where you came in from....",
+    "dungeon-6": ["You step into the room and you see nothing much the place looks scary",
       "There must be something here! Surely there is",
-      "There detective was right of course there was somethjng here",
-      "Something was shining on the floor",
-      "Should I pick this up....?"
+      "The only thing greeting the detective was the cold darkness. Oh the pain of being stuck in a dungeon",
+      "Wait why would monsters even live in dungeons. Dungeons are called and scary and cold and scary did I mention it was cold?",
+      "Being a detective I should be above these mundane thoughts and focus on the survivors",
+      "Yup not scared at all, I am absolutely unfrightened about this cold dark room that has lighting from nowhere",
+      "No issues whatsoever!",
+      "YUP no issues at all......!",
+      "The detective fidgeted around thinking of where to go. He was not the brightest in school as you can tell..."
     ],
 
-    "dungeon-7": ["You finally got through after picking up the two keys jeez that was hard!!",
-      "The survivors should be around. The whole place is pretty walled off, guess I can only go forward...",
+    "dungeon-7": ["You step into the room and you see nothing much the place looks scary",
+      "The survivors should be around. The whole place is pretty walled off guess I can only go forward...",
       "Hey wait there's something here... A gun?",
+      "Surely not... Why would there be a gun over here",
+      "Hmm this seems suspicious who dropped a gun...",
+      "Maybe I should pick it up for my safety I mean for safekeeping because I don't need guns! I'm an agent of justice!",
+      "Ahh who cares it's not like I the unafraid detective even needs a gun",
+      "The gun was just so tempting though....",
+      "I mean it couldn't hurt to just have the gun for a bit right I'm collecting evidence yup evidence that's what it is....",
+      "The detective continued to justify himself as he righteously looked at the gun beneath his feet.",
       "Pick it up?"
     ],
 
-    "dungeon-8": ["The whole place looks walled off except for where you came in from....",
-      "There must be something here! Surely there is",
-      "There detective was right of course there was somethjng here",
-      "Something was shining on the floor",
-      "Should I pick this up....?"
+    "dungeon-8": ["You step into the room and you see nothing much the place looks scary",
+      "HAHA I'm totally unafraid now with me and my gun I will not be afraid of anything",
+      "The detective had somehow felt 100% confidence in his abilities with the gun",
+      "Ahh darkness you seem so cute now. I the brave detective shall conquer you and find the survivors!",
+      "The detective had of course forgotten that he had no idea how to use a gun...",
+      "Ah well it's totally fine. How hard could it be to shoot I've watched plenty of James bond movies and it looks easy as pie",
+      "Especially if you're as intelligent as I am, ahh the perils of being so intelligent. God should not have made a being as intelligent as I.",
+      "Onwards detective! Go and find the survivors and don't shoot yourself!"
     ],
 
-    "dungeon-9": ["You step into the room and can see nothing much",
-      "Perhaps going forward or right might yield something, I hope nothing happens...",
-      "Ignoring our poor detective keep exploring the dungeon clues must be somewhere",
+    "dungeon-9": ["You step into the room and you see nothing much the place looks scary",
+      "I'm just so hopelessly lost ugh mother always told me I wasn't any good with puzzles.",
+      "In fact I recall her saying I saw too dumb to even know what a puzzle was.",
+      "Well Mum you should be glad your son has finally found out what a puzzle is",
+      "Pain and torture that's what it is!!!",
+      "By golly if I don't find them soon and get out of here I'm going to go insane!!!",
+      "Ignoring our poor detective keep exploring the dungeon",
       "This place was still giving the detective the creeps!"
     ],
 
-    "dungeon-10": ["You step into the room in front and see pure darkness there was nothing in front",
-      "Here goes nothing the detective said as he went to the left",
+    "dungeon-10": ["You step into the room and you see nothing much the place looks scary",
+      "Here goes nothing the detective said as he went onwards",
+      "'Do I really need to do this' sighed the detective",
       "Becoming a monk doesn't sound like such a bad deal now...",
       "I hope this is the last place to look this isn't good for my poor nerves!"
     ],
@@ -141,16 +173,6 @@
       "[And thus our brilliant detective went onwards to continue on his great adventures]",
       "Did that detective just leave us here.... We don't even have a map.... - Survivors",
       "The end!"
-    ],
-
-    "end-2": ["Ah it feels good to be out of there I felt so confined",
-      "Man it's a beautiful day I'm never going to go back in there again!!",
-      "Gotta go report this to other cops too to let them know the survivors are here",
-      "I could also use a quick bathroom break and a coffee...",
-      "[And thus our brilliant detective went onwards to continue on his great adventures]",
-      "Did that detective just leave us here.... We don't even have a map.... - Survivors",
-      "The end!"
     ]
-
   }
 }
