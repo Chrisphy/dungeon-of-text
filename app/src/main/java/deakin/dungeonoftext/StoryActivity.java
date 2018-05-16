@@ -1,5 +1,6 @@
 package deakin.dungeonoftext;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
@@ -11,6 +12,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -42,27 +44,35 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     ImageView img;
     TextView textview;
     JSONObject jsonobj;
+    JSONObject gunobj;
+
 
     //Assets
     AssetManager assetManager;
     InputStream dataStream = null;
     InputStream imageStream = null;
-    static MediaPlayer m;
 
     //Array for text to load into
     String jsonText = null;
+    String temp;
+    String currentDungeon;
 
-
+    MediaPlayer musicplayer;
+    AssetFileDescriptor fd;
 
     //Arrays
     String[] textArray = new String[1000];
 
 
+    Boolean endstatus = false;
 
     //Int
     int size;
     int Count = 0;
 
+
+    //Boolean
+    boolean gunpresence;
 
     Handler h = new Handler();
 
@@ -117,84 +127,79 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     }
 
     public void playBG() {
+
+
         try {
-            if (m.isPlaying()) {
-                m.stop();
-                m.release();
-                m = new MediaPlayer();
-            }
+            // Get the file from the asset folder
+            fd = getAssets().openFd("bgmusic.mp3");
 
-            AssetFileDescriptor descriptor = getAssets().openFd("bgmusic.mp3");
-            m.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
-            descriptor.close();
+            // Create media player object
+            musicplayer = new MediaPlayer();
 
-            m.prepare();
-            m.setVolume(50,50);
-            m.setLooping(true);
-            m.start();
-        } catch (Exception e) {
+            // Set the music source.
+            musicplayer.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(),fd.getLength());
+
+            //Play and loop
+            musicplayer.setLooping(true);
+            musicplayer.prepare();
+            musicplayer.start();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
+    protected void onPause() {
+        super.onPause();
 
-
-
-
-    public void setText(final String s)
-    {
-        final int[] i = new int[1];
-        i[0] = 0;
-        final int length = s.length();
-        final Handler handler = new Handler()
-        {
-            @Override
-            public void handleMessage(Message msg) {
-                if (i[0] == length - 1) {
-                    textview.setText(null);
-                }
-
-                super.handleMessage(msg);
-                char c= s.charAt(i[0]);
-                textview.append(String.valueOf(c));
-                i[0]++;
-
-
-
-            }
-        };
-
-        final Timer timer = new Timer();
-        TimerTask taskEverySplitSecond = new TimerTask() {
-            @Override
-            public void run() {
-                handler.sendEmptyMessage(0);
-                if (i[0] == length - 1) {
-                    timer.cancel();
-                }
-            }
-        };
-        timer.schedule(taskEverySplitSecond, 1, 100);
+        musicplayer.pause();
     }
 
 
+    public void playEndBG(){
+        musicplayer.stop();
 
+        try {
+            // Get the file from the asset folder
+            fd = getAssets().openFd("endmusic.mp3");
+
+            // Create media player object
+            musicplayer = new MediaPlayer();
+
+            // Set the music source.
+            musicplayer.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(),fd.getLength());
+
+            //Play and loop
+            musicplayer.setLooping(true);
+            musicplayer.prepare();
+            musicplayer.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 
     public void clickEvent(View view){
 
+        if(Count < textArray.length){
 
-        if(Count < textArray.length || textArray == null){
-           // textview.setText(textArray[Count]);
-            setText(textArray[Count]);
+            textview.setText(textArray[Count]);
 
             Count++;
         }
         else{
-            Count = 0;
 
-            textview.setText("Click on any of the buttons to move.");
+            if(currentDungeon == "dungeon-11"){
+                Count = 0;
+                endingAlert();
+
+            }
+            else{
+                textview.setText("Click on any of the buttons to move.");
+            }
+
         }
     }
 
@@ -213,7 +218,9 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
                 JSONObject mainobj = jsonobj.getJSONObject("Story");
 
-                String temp = mainobj.getString(str);
+                currentDungeon = str;
+
+                temp = mainobj.getString(str);
 
                 temp = temp.substring(1,temp.length()-1);
 
@@ -230,6 +237,11 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
         return textArray;
 
     }
+
+
+
+
+
 
 
     public String loadJSONFromAsset() {
@@ -271,18 +283,22 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     }
 
 
+    public void clearAll(){
+        textview.setText("");
+        textArray = new String[1000];
+    }
+
 
 
     public void levelOne() {
 
-        setImage("dungeon-1.png");
+        clearAll();
 
-        playBG();
+        setImage("dungeon-1.png");
 
         textArray("dungeon-1");
 
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -296,7 +312,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-2");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -310,7 +325,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-3");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -323,7 +337,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-4");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -336,7 +349,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-5");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -348,7 +360,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-6");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -360,7 +371,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-7");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
+        alertGun();
 
     }
 
@@ -373,7 +384,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-8");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -385,7 +395,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-9");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -397,7 +406,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-10");
 
-        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -406,26 +414,24 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         setImage("monster.png");
 
-        textview.setText("*You hear a lot of movement in the darkness...*");
 
         textArray("dungeon-11");
+
 
     }
 
 
-    public void end(boolean bool){
-        if(bool == true){
-            setImage("end_image.png");
+    public void end(){
+
+            playEndBG();
+
+            setImage("end_image.jpg");
+
+            textview.setText("Freedom...");
 
             textArray("end");
-        }
 
-        else{
-            setImage("game-over.png");
-
-            textArray("end-2");
-
-        }
+            Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -472,6 +478,102 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
 
     }
+
+
+    //Alert for yes/no picking up the gun
+
+    public void alertGun(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Pick up?");
+        builder.setMessage("Are you sure?");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+
+                guncheck();
+
+                dialog.dismiss();
+            }
+        });
+
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
+
+    }
+
+    public void confirmGun(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("You've picked up a gun!");
+        builder.setMessage("Congratulations!");
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
+
+    }
+
+
+    public void guncheck(){
+
+        try{
+            // creating json array from json object
+            if(jsonText != null){
+                gunobj = new JSONObject(jsonText);
+
+                gunpresence = gunobj.getBoolean("gunPresence");
+
+                if(gunpresence == false){
+
+
+                    confirmGun();
+
+                }
+            }
+
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+    //Alert for ending sequence
+
+    public void endingAlert(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Do you want to run?");
+        builder.setMessage("Are you sure?");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+
+                end();
+
+                dialog.dismiss();
+            }
+        });
+
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
+
+    }
+
+
+
+
     //Function to hide navigation refer to map
     public void checkButtons(){
         if(Utilities.a != 0 && Utilities.b == 2) {

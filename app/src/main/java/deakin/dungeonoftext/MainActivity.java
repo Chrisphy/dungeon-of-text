@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         final Button helpbtn = (Button) findViewById(R.id.help_button);
         final Button startbtn = (Button) findViewById(R.id.start_button);
-        final Button routebtn = (Button) findViewById(R.id.routes_button);
 
 
 
@@ -42,24 +41,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-        routebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
-                    startActivity(intent);
-
-
-                }
-                catch (Exception e){
-                    Log.e("Error", "Failed to go to Helpactivity");
-                    e.printStackTrace();
-                }
-
-            }
-        });
 
 
 

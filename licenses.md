@@ -17,3 +17,7 @@
 8) monster.png - Woman Soldier - Copyright Sylvileex || https://opengameart.org/content/woman-soldier-character || CC-BY 3.0 License || Retrieved 13/5/2018
 
 9) monster.png - Business man - Copyright Grahhhhh || https://opengameart.org/content/business-man-1 || Public Domain || Retrieved 13/5/2018
+
+10) monster.png - Monster - Copyright Grahhhhh || https://opengameart.org/content/business-man-1 || Public Domain || Retrieved 13/5/2018
+
+11) endmusic.mp3 - Copyright syncopika || https://opengameart.org/content/happy-tune || CC-BY 3.0 License || Retrieved 16/5/2018
