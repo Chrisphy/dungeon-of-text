@@ -196,6 +196,10 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
                 endingAlert();
 
             }
+            if(currentDungeon == "end"){
+                textview.setText("We hope you enjoyed the game!");
+            }
+
             else{
                 textview.setText("Click on any of the buttons to move.");
             }
