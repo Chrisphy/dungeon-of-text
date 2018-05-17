@@ -45,4 +45,10 @@
 
 13/05/2018 - Wrap up movements for level 1(Duc)
 
-16/05/2018 - Finished off all the known bugs/added comments, modified the JSON file for current status and playing background music.
+15/05/2018 - Making icons for app (Duc)
+
+16/05/2018 - Finished off all the known bugs/added comments, modified the JSON file for current status and playing background music(Chris).
+
+16/05/2018 - Fixing last screen layout.(Duc)
+
+17/05/2018 - Finished off the app and uploaded onto Play store

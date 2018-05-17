@@ -40,9 +40,11 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
 
     //Views
-
     ImageView img;
     TextView textview;
+
+
+    //JSON Objects
     JSONObject jsonobj;
     JSONObject gunobj;
 
@@ -52,19 +54,21 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     InputStream dataStream = null;
     InputStream imageStream = null;
 
-    //Array for text to load into
+
+
+    //Strings
     String jsonText = null;
     String temp;
     String currentDungeon;
 
+
+    //Mediaplayer
     MediaPlayer musicplayer;
     AssetFileDescriptor fd;
 
     //Arrays
     String[] textArray = new String[1000];
 
-
-    Boolean endstatus = false;
 
     //Int
     int size;
@@ -74,7 +78,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     //Boolean
     boolean gunpresence;
 
-    Handler h = new Handler();
 
     //Navigation buttons
     Button upbtn;
@@ -149,6 +152,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     }
 
 
+    //Onpause method to check if activity is out of focus
     protected void onPause() {
         super.onPause();
 
@@ -156,6 +160,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     }
 
 
+    //Play the ending background music for the pap
     public void playEndBG(){
         musicplayer.stop();
 
@@ -180,7 +185,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     }
 
-
+    //Click event that is triggered when the textview is clicked iterating through the array
     public void clickEvent(View view){
 
         if(Count < textArray.length){
@@ -209,7 +214,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
 
 
-
+    //Array method that takes a string value and outputs the appropriate array from the JSON
 
     public String[] textArray(String str){
 
@@ -245,9 +250,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
 
 
-
-
-
+    //Load the JSON file from the Assets folder into memory
     public String loadJSONFromAsset() {
         try {
             dataStream = assetManager.open("Data/Data.json");
@@ -264,7 +267,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
     }
 
 
-
+    //Set image file from the assets folder when given the string name
     public void setImage(String str){
 
         try {
@@ -286,13 +289,14 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     }
 
-
+    //Clears all textview
     public void clearAll(){
         textview.setText("");
         textArray = new String[1000];
     }
 
 
+    //Start level methods
 
     public void levelOne() {
 
@@ -435,9 +439,13 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
             textArray("end");
 
+            leftbtn.setVisibility(View.INVISIBLE);
+
             Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
+
+    //End level methods
 
 
     //Function to check current room and load appropriate room
@@ -510,6 +518,8 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     }
 
+    //Alert when gun is picked up
+
     public void confirmGun(){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -523,6 +533,8 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
     }
 
+
+    //Check for gun boolean inside the JSOn
 
     public void guncheck(){
 
