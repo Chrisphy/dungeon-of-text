@@ -115,9 +115,8 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
         assetManager = getApplicationContext().getAssets();
 
 
-        img.setImageResource(R.drawable.intro);
 
-
+        setImage("intro.jpg");
 
         Utilities.initialMatrix();
 
@@ -157,6 +156,12 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
         super.onPause();
 
         musicplayer.pause();
+    }
+
+    protected void onResume(){
+        super.onResume();
+
+        musicplayer.start();
     }
 
 
@@ -288,6 +293,8 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
         }
 
     }
+
+
 
     //Clears all textview
     public void clearAll(){
