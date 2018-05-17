@@ -435,6 +435,8 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
             textArray("end");
 
+            leftbtn.setVisibility(View.INVISIBLE);
+
             Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
