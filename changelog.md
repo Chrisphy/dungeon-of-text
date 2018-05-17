@@ -50,3 +50,5 @@
 16/05/2018 - Finished off all the known bugs/added comments, modified the JSON file for current status and playing background music(Chris).
 
 16/05/2018 - Fixing last screen layout.(Duc)
+
+17/05/2018 - Finished off the app and uploaded onto Play store
