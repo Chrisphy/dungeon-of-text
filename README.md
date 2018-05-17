@@ -23,9 +23,9 @@ The game will be developed for Android using tools such as the Android SDK.
 
 ## Directory explanation
 - Main project files stored in ./app/
-- Asset files stored in ./app/main/assets
-- Image files stored in ./app/main/assets/images
-- Image files stored in ./app/main/assets/Data
+- Asset files stored in ./app/src/main/assets
+- Image files stored in ./app/src/main/assets/images
+- Image files stored in ./app/src/main/assets/Data
 - Activity files stored in ./app/main/java/deakin.dungeonoftext/
 
 
