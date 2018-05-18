@@ -211,6 +211,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
             }
 
             else{
+                Count = 0;
                 textview.setText("Click on any of the buttons to move.");
             }
 
@@ -313,6 +314,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-1");
 
+        Log.e("Json String", "JSON String"+ textArray[0]);
 
 
     }
@@ -327,6 +329,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-2");
 
+        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -340,6 +343,7 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
         textArray("dungeon-3");
 
+        Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
@@ -448,7 +452,6 @@ public class StoryActivity extends MainActivity implements View.OnClickListener 
 
             leftbtn.setVisibility(View.INVISIBLE);
 
-            Log.e("Json String", "JSON String"+ textArray[0]);
 
     }
 
